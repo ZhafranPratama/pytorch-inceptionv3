@@ -15,7 +15,7 @@ PATH = "model.pt"
 model = torch.load(PATH)
 model.eval()
 
-filename = "lebah.jpg"
+filename = "baby.jpg"
 
 input_image = Image.open(filename)
 preprocess = transforms.Compose([
@@ -40,6 +40,6 @@ probabilities = torch.nn.functional.softmax(output[0], dim=0)
 with open("classes.txt", "r") as f:
     categories = [s.strip() for s in f.readlines()]
 # Show top categories per image
-top5_prob, top5_catid = torch.topk(probabilities, 1)
+top5_prob, top5_catid = torch.topk(probabilities, 5)
 for i in range(top5_prob.size(0)):
     print("Predicted: " + str(categories[top5_catid[i]]) + "\n" + "Confidence: " + str(top5_prob[i].item()*100))

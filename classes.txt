@@ -1,2 +1,19 @@
-ants
-bees
+beauty
+fashion
+finance
+food
+gamers
+gigs worker
+health
+homedecor
+kpop
+lifestyle
+music
+nocateg
+otomotif
+parenting
+politik
+reviewer
+sport
+technology
+traveling
